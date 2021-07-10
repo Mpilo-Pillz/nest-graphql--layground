@@ -1,0 +1,27 @@
+mutation {
+  createLesson(name: "TypeScript Class" 
+    startDate: "2021-09-14T01:00:00+01:00"
+    endDate: "2021-10-14T01:00:00+01:00") {
+    name
+    startDate
+    endDate
+    id
+  }
+}
+
+query {
+  lesson {
+    name
+    startDate
+    endDate
+  }
+}
+
+query {
+  lesson(id: "3114a943-6a2f-443c-baf3-7f68e4019b04"){
+    name
+    startDate
+    endDate
+    id
+  }
+}
