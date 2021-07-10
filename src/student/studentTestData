@@ -8,3 +8,12 @@ mutation {
     lastName
   }
 }
+
+query{
+  students {
+    id
+    firstName
+    lastName
+  }
+}
+
