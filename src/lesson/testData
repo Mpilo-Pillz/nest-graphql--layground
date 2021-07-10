@@ -1,5 +1,5 @@
 mutation {
-  createLesson(name: "TypeScript Class" 
+  createLessonold(name: "TypeScript Class" 
     startDate: "2021-09-14T01:00:00+01:00"
     endDate: "2021-10-14T01:00:00+01:00") {
     name
@@ -7,6 +7,39 @@ mutation {
     endDate
     id
   }
+}
+
+mutation {
+  createLesson(
+    createLessonInput: {
+      name: "Nest Class" 
+    startDate: "2022-01-14T01:00:00+01:00"
+    endDate: "2022-02-14T01:00:00+01:00"
+    })
+     {
+    name
+    startDate
+    endDate
+    id
+  }
+
+}
+
+mutation {
+  createLesson(
+    createLessonInput: {
+      name: "postgres Class" 
+    startDate: "2022-03-14T01:00:00+01:00"
+    endDate: "2022-03-14T01:00:00+01:00"
+      students: ["d8566028-e10f-4c93-a9c5-dd3ac5d6bf82", "73a3026f-eb9b-4f11-84b4-de8d0f2bc840", "e5afd64a-4aa5-46b8-9fd6-a97bf62157c3"]
+    })
+     {
+    name
+    startDate
+    endDate
+    id
+  }
+
 }
 
 query {
@@ -23,5 +56,15 @@ query {
     startDate
     endDate
     id
+  }
+}
+
+
+mutation {
+  assignStudentsToLesson(assignStudentsToLessonInput: {
+    lessonId: "82d098a2-8389-47db-8af5-fcbdf07b0fa9",
+    studentIds: ["d8566028-e10f-4c93-a9c5-dd3ac5d6bf82", "73a3026f-eb9b-4f11-84b4-de8d0f2bc840", "e5afd64a-4aa5-46b8-9fd6-a97bf62157c3"]
+  }) {
+    name
   }
 }
