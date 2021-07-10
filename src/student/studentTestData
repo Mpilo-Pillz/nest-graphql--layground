@@ -1,0 +1,10 @@
+mutation {
+  createStudent(createStudentInput: {
+    firstName: "Nikita",
+    lastName: "Pillz"
+  }) {
+    id
+    firstName
+    lastName
+  }
+}
